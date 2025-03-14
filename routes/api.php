@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/test','TestController@index');
 Route::get('/migrate/all_teams','TestController@Migrate_All_Teams');
+
 Route::get('/get/all_teams','TeamController@Get_All_Teams');
+Route::get('/get/team_past_events/{team_id}','TeamController@Get_Team_Past_Events');
