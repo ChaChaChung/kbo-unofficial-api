@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/test','TestController@index');
+Route::get('/migrate/all_teams','TestController@Migrate_All_Teams');
+Route::get('/get/all_teams','TeamController@Get_All_Teams');
