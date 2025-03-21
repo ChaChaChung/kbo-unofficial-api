@@ -45,4 +45,21 @@ class TeamController extends Controller
             \Log::alert($e->getMessage());
         }
     }
+
+    public function Get_Team_Next_Events($team_id)
+    {
+        try {
+            $ret_data = new \StdClass();
+
+            $api_url = config('kbo.DATA_API_URL');
+
+            $json = file_get_contents("$api_url/eventsnext.php?id=$team_id");
+            $teams = json_decode($json);
+            // \Log::alert(json_encode($teams));
+
+            return response()->json($teams);
+        } catch (\Throwable $e) {
+            \Log::alert($e->getMessage());
+        }
+    }
 }

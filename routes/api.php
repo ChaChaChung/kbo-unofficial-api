@@ -23,3 +23,6 @@ Route::get('/migrate/all_teams','TestController@Migrate_All_Teams');
 
 Route::get('/get/all_teams','TeamController@Get_All_Teams');
 Route::get('/get/team_past_events/{team_id}','TeamController@Get_Team_Past_Events');
+Route::get('/get/team_next_events/{team_id}','TeamController@Get_Team_Next_Events');
+
+Route::get('/get/league_next_events/{date}','EventController@Get_League_Events');

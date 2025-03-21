@@ -41,7 +41,7 @@ class TestController extends Controller
         }
     }
 
-    protected static function Translate_Team_Name($team_en_name)
+    public static function Translate_Team_Name($team_en_name)
     {
         try {
             $ret_data = new \StdClass();
@@ -102,7 +102,7 @@ class TestController extends Controller
         }
     }
 
-    protected static function Translate_Stadium_Name($stadium_en_name)
+    public static function Translate_Stadium_Name($stadium_en_name)
     {
         try {
             $stadium_cn_name = '';
