@@ -26,4 +26,7 @@ Route::get('/get/team_past_events/{team_id}','TeamController@Get_Team_Past_Event
 Route::get('/get/team_next_events/{team_id}','TeamController@Get_Team_Next_Events');
 
 Route::get('/get/league_next_events/{date}','EventController@Get_League_Events');
-Route::get('/get/league_last_events/{date}','EventController@Get_League_Last_Events');
+// Route::get('/get/league_last_events/{date}','EventController@Get_League_Last_Events');
+
+Route::post('/get/schedule','ScheduleController@Get_Schedule');
+Route::get('/get/schedule/2','ScheduleController@Get_Schedule2');
