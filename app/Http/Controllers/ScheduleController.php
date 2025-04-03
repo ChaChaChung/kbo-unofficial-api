@@ -11,8 +11,8 @@ class ScheduleController extends Controller
     public function Get_Schedule()
     {
         try {
-            $channelSecret = '2007198714';
-            $channelAccessToken = '1b7++AxESWhL695bQjw8SOeTb7y1HQ/YGewHu+GcJJ8LtuGZwC74PRvU2BaQqk4tOEF5/omuwehc2yjSwPhK4j2UV+uGlKPy8BCZ/qqqtH3iW9beMHY6ZEZrWL24dAKAnNarjuAYSsn82SK/c5HTLwdB04t89/1O/w1cDnyilFU=';
+            $channelSecret = env('CHANNEL_SECRET');
+            $channelAccessToken = env('CHANNEL_ACCESS_TOKEN');
 
             $json = file_get_contents('http://localhost:8080/schedule');
             $events = json_decode($json);
